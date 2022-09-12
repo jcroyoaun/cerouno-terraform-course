@@ -188,4 +188,54 @@ terraform apply
 https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file
 
 
-## Ejercicio 1.9 - Argumentos conflictuados
+## Ejercicio 1.9 - Volviendo a AWS
+Ahora que aprendimos y pudimos reflexionar acerca de la sintaxis HCL y el Core Workflow de Terraform y algunas desviaciones comunes de este, es momento de mudarnos a La Nube.
+
+Analicemos el ejercicio 1.9 y observemos que, el archivo donde tenemos nuestro codigo ahora se hace llamar "main.tf". Este es el nombre estandar que tienen los archivos declarativos de Terraform cuando solo tenemos uno. En este punto, tenemos otros bloques, además del clásico bloque "resource" que hemos visto en Ejercicios Anteriores.
+
+```
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+
+  required_version = ">= 1.2.0"
+}
+provider "aws" {
+  region  = "us-west-2"
+}
+
+resource "aws_instance" "app_server" {
+  ami           = "ami-830c94e3"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "EjemploDeAppServerInstance"
+  }
+}
+```
+
+### Bloque Terraform
+* Contiene informacion acerca de los providers. Se utiliza también para establecer versiones del proveedor en las que queremos trabajar
+
+### Providers
+* Establecemos que es aws. Recordemos que podemos tener multiples providers en la configuracion de Terraform, ya que este es Agnostico de la nube y es una de las ventajas principales.
+
+### Resources 
+* Aqui definimos el tipo de recurso que vamos a desplegagr o modificar En La Nube.
+
+Seguimos el core workflow y un terraform show al final para leer los cambios que realizamos.
+
+OJO : no olvidemos usar terraform destroy al final, ya que los recursos en la nube son costosos.
+
+
+## Ejercicio 1.10 - Utilizando input variables
+En este ejercicio, tenemos dos versiones de el manejo de variables, una es la utilización de estas usando un archivo variable.tf y el otro es utilizano la bandera -var desde el terraform CLI. (linea de comandos de terraform)
+
+```
+terraform apply -var "instance_name=OtroNombreDiferente"
+```
+

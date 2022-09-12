@@ -1,10 +1,13 @@
 # cerouno-terraform-course
-Curso de IaC Semana 10 para Cerouno
+## Curso de IaC Semana 10 para Cerouno
 
-En este curso aprenderemos los conceptos de Infraestructura como Código y aprenderemos a usar Terraform con laboratorios prácticos en AWS para entender cómo se utiliza Terraform para crear, modificar y evolucionar los recursos en la nube de acuerdo a las necesidades de un negocio en casos reales, aprenderemos y entenderemos a detalle el "Core Workflow" de Terraform, que constituye una parte central del uso de la herramienta en el día a día. Habrá un modulo dedicado a Sintaxis HCL  (Hashicorp Configuration Language) y los tipos de operadores y funciones que se pueden utilizar para computar algunas de las operaciones más comunes.
+En este curso aprenderemos los conceptos de Infraestructura como Código y aprenderemos a usar Terraform con laboratorios prácticos en AWS para entender cómo se utiliza Terraform para crear, modificar y evolucionar los recursos en la nube de acuerdo a las necesidades de un negocio en casos reales, aprenderemos y entenderemos a detalle el "Core Workflow" de Terraform, que constituye una parte central del uso de la herramienta en el día a día. Habrá un módulo dedicado a Sintaxis HCL (Hashicorp Configuration Language) y los tipos de operadores y funciones que se pueden utilizar para computar algunas de las operaciones más comunes tales como estructuras de control, decisiones y expansión de variables. 
 
 # Temario : 
-## Dia 1 - Introducción a IaC, configuración de entorno de desarrollo y primeros laboratorios.
+## Dia 1 - 
+## Dia 2 - 
+## Dia 3 - 
+## Dia 4 - 
 
 
 ### Qué es IaC? - 

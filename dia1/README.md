@@ -1,6 +1,14 @@
 # DIA 1
 
-En el dia 1 comenzaremos con un breve demo de Infraestructura como Código (IaC por sus siglas en ingles "Infrastructure as Code") usando Terraform. Aprenderemos qué es IaC, para qué se usa, que problemas resuelve y finalmente estudiaremos el flujo básico de Terraform para adentrarnos en el uso correcto de la herramienta en un entorno productivo.
+En el dia 1 comenzaremos con un breve demo de Infraestructura como Código (IaC por sus siglas en ingles "Infrastructure as Code") usando Terraform. Aprenderemos qué es IaC, para qué se usa, que problemas resuelve y finalmente estudiaremos el flujo básico de Terraform para adentrarnos en el uso 
+correcto de la herramienta en un entorno productivo.
+
+# Indice
+1. [Prerequisitos](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#prerequisitos-)
+2. [Ejercicio 1.1 - Instalar Terraform]()
+3. [Ejercicio 1.2 - Ejercicio 1.2 - IAM - Configurar AWS_ACCESS_KEY y AWS_SECRET_ACCESS_KEY]()
+4. [Ejercicio 1.3 - Ejercicio 1.3 - Clonar Repositorio]()
+3. [Ejercicio 1.4 - Crear un recurso en AWS usando Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#ejercicio-14---crear-un-recurso-en-aws-usando-terraform)
 
 ## Prerequisitos :
 * Tener cuenta de AWS (free tier)

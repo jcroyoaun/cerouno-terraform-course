@@ -10,7 +10,7 @@ correcto de la herramienta en un entorno productivo.
 4. [Ejercicio 1.3 - Ejercicio 1.3 - Clonar Repositorio](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-13---clonar-repositorio)
 5. [Ejercicio 1.4 - Crear un recurso en AWS usando Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#ejercicio-14---crear-un-recurso-en-aws-usando-terraform)
 6. [Ejercicio 1.5 - HCL Syntaxt / local_provider](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-15---hcl-syntax--ejemplo-con-local_provider)
-
+7. [Ejercicio 1.6 - Actualizando recursos existentes]()
 
 ## Prerequisitos :
 * Tener cuenta de AWS (free tier)
@@ -136,3 +136,56 @@ resource "local_file" "pollo" {
 * * "pollos" - el nombre logico con el que vamos a identificar el recurso.
 * Dentro de los brackets {} tenemos los argumentos escritos en formato key / value pair.
 
+
+## Ejercicio 1.6 - Saliendo del Core Workflow, actualizando y destruyendo recursos 
+Fuera del "Core Workflow", y donde vamos a pasar la mayor parte de nuestra vida profesional en Terraform es a partir del Dia2+. Por tanto, debemos aprender el flujo de actualizar y evolucionar nuestros recursos.
+
+Para el ejercicio 1.6, vamos a inicializar el directorio y aplicar los cambios tal como lo hemos visto en los ejercicios anteriores (OJO: no modificar archivo .tf todavia)
+```
+# Hacemos cd al directorio del ejercicio1.6
+cd ejercicio1.6
+
+# Utilizamos el core workflow de init/plan/apply
+terraform init
+
+terraform plan
+
+terraform apply
+```
+Después, descomentamos la línea de file_permission de nuestro archivo local.tf, y ejecutamos el core workflow de nuevo.
+
+Analicemos como el output de terraform plan es distinto.
+
+
+## Ejercicio 1.7 - Argumentos requeridos
+```
+# Hacemos cd al directorio del ejercicio1.7
+cd ejercicio1.7
+
+# Utilizamos el core workflow de init/plan/apply
+terraform init
+
+terraform plan
+
+terraform apply
+```
+Vemos el mensaje de error, qué podrá ser? 
+
+
+## Ejercicio 1.8 - Argumentos conflictuados
+```
+# Hacemos cd al directorio del ejercicio1.8
+cd ejercicio1.8
+
+# Utilizamos el core workflow de init/plan/apply
+terraform init
+
+terraform plan
+
+terraform apply
+```
+
+https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file
+
+
+## Ejercicio 1.9 - Argumentos conflictuados

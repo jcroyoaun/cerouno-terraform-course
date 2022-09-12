@@ -9,7 +9,7 @@ correcto de la herramienta en un entorno productivo.
 3. [Ejercicio 1.2 - Ejercicio 1.2 - IAM - Configurar AWS_ACCESS_KEY y AWS_SECRET_ACCESS_KEY](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-12---iam---configurar-aws_access_key-y-aws_secret_access_key)
 4. [Ejercicio 1.3 - Ejercicio 1.3 - Clonar Repositorio](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-13---clonar-repositorio)
 5. [Ejercicio 1.4 - Crear un recurso en AWS usando Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#ejercicio-14---crear-un-recurso-en-aws-usando-terraform)
-6. [Ejercicio 1.5 - HCL Syntaxt / local_provider]
+6. [Ejercicio 1.5 - HCL Syntaxt / local_provider](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-15---hcl-syntax--ejemplo-con-local_provider)
 
 
 ## Prerequisitos :
@@ -96,10 +96,43 @@ terraform apply
 ## Ejercicio 1.5 - HCL Syntax / ejemplo con local_provider 
 En este ejercicio vamos a utilizar un local provider para crear un archivo local en nuestra computadora.
 
-Vamos a analizar y definir la estructura de el siguiente Bloque De Configuracion : 
+La estructura basica que vamos a analizar va a ser esta :
+```
+<block> <parameters> {
+    key1 = value1 #arguments
+    key2 = value2 #arguments
+}
+```
+Para correr el ejercicio :
+```
+# Hacemos cd al directorio del ejercicio1.5
+cd ejercicio1.5
+
+# Utilizamos el core workflow de init/plan/apply
+terraform init
+
+terraform plan
+
+terraform apply
+
+# BONUS : podemos usar terraform show para ver el resultado de la ejecución, incluyendo la ruta donde se creó el archivo
+terraform show
+```
+
+### ejercicio1.5.1 - analizando la sintaxis 
+Analicemos la sintaxis de el bloque de terraform que acabamos de ejecutar en el ejercicio1.5
+
 ```
 resource "local_file" "pollo" {
 	filename = "./pollos.txt"
 	content = "Me encantan los pollos!!"
 }
 ```
+
+* resource - indica el tipo de bloque, es uno de los muchos tipos de bloque que hay, pero resource es mandatorio (debe haber al menos uno)
+* "local_file" - el nombre del provider (local, en este caso, https://registry.terraform.io/browse/providers)
+* * local = provider (https://registry.terraform.io/providers/hashicorp/local/latest/docs)
+* * file = resource (https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file
+* * "pollos" - el nombre logico con el que vamos a identificar el recurso.
+* Dentro de los brackets {} tenemos los argumentos escritos en formato key / value pair.
+

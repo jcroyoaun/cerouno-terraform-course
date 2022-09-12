@@ -7,6 +7,18 @@ En el dia 1 comenzaremos con un breve demo de Infraestructura como Código (IaC 
 * Tener AWS CLI instalado
 * Tener Visual Studio Code instalado
 
+## Pre requisito 1 - Cuenta de AWS
+https://aws.amazon.com/es/premiumsupport/knowledge-center/create-and-activate-aws-account/
+
+## Pre requisito 2 - AWS CLI instalado
+https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html
+
+## Pre requisito 3 - Visual Studio Code
+### Descarga : https://code.visualstudio.com/
+### Configurar la terminal de Visual Studio Code (si eres usuario de Windows y prefieres una terminal con BASH, ve https://www.youtube.com/watch?v=Yn-ANAtDQ_0 para aprender a configurarlo) 
+### Instalar Extension "Hashicorp Terraform"
+
+---------------------------------------------
 ## Ejercicio 1.1 - Instalar terraform
 https://www.terraform.io/downloads
 

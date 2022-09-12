@@ -5,6 +5,10 @@ En este curso aprenderemos los conceptos de Infraestructura como Código y apren
 
 # Temario : 
 ## Dia 1 - 
+* Pre requisitos y configuración de entorno de desarrollo
+* IaC
+* Terraform en AWS
+* HCL Syntax
 ## Dia 2 - 
 ## Dia 3 - 
 ## Dia 4 - 

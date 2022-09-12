@@ -5,10 +5,12 @@ correcto de la herramienta en un entorno productivo.
 
 # Indice
 1. [Prerequisitos](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#prerequisitos-)
-2. [Ejercicio 1.1 - Instalar Terraform]()
-3. [Ejercicio 1.2 - Ejercicio 1.2 - IAM - Configurar AWS_ACCESS_KEY y AWS_SECRET_ACCESS_KEY]()
-4. [Ejercicio 1.3 - Ejercicio 1.3 - Clonar Repositorio]()
-3. [Ejercicio 1.4 - Crear un recurso en AWS usando Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#ejercicio-14---crear-un-recurso-en-aws-usando-terraform)
+2. [Ejercicio 1.1 - Instalar Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-11---instalar-terraform)
+3. [Ejercicio 1.2 - Ejercicio 1.2 - IAM - Configurar AWS_ACCESS_KEY y AWS_SECRET_ACCESS_KEY](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-12---iam---configurar-aws_access_key-y-aws_secret_access_key)
+4. [Ejercicio 1.3 - Ejercicio 1.3 - Clonar Repositorio](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-13---clonar-repositorio)
+5. [Ejercicio 1.4 - Crear un recurso en AWS usando Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#ejercicio-14---crear-un-recurso-en-aws-usando-terraform)
+6. [Ejercicio 1.5 - HCL Syntaxt / local_provider]
+
 
 ## Prerequisitos :
 * Tener cuenta de AWS (free tier)
@@ -90,3 +92,14 @@ terraform plan
 terraform apply
 ```
 
+
+## Ejercicio 1.5 - HCL Syntax / ejemplo con local_provider 
+En este ejercicio vamos a utilizar un local provider para crear un archivo local en nuestra computadora.
+
+Vamos a analizar y definir la estructura de el siguiente Bloque De Configuracion : 
+```
+resource "local_file" "pollo" {
+	filename = "./pollos.txt"
+	content = "Me encantan los pollos!!"
+}
+```

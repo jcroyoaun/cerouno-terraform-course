@@ -14,9 +14,9 @@ https://aws.amazon.com/es/premiumsupport/knowledge-center/create-and-activate-aw
 https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html
 
 ## Pre requisito 3 - Visual Studio Code
-### Descarga : https://code.visualstudio.com/
-### Configurar la terminal de Visual Studio Code (si eres usuario de Windows y prefieres una terminal con BASH, ve https://www.youtube.com/watch?v=Yn-ANAtDQ_0 para aprender a configurarlo) 
-### Instalar Extension "Hashicorp Terraform"
+* Descarga : https://code.visualstudio.com/
+* Configurar la terminal de Visual Studio Code (si eres usuario de Windows y prefieres una terminal con BASH, ve https://www.youtube.com/watch?v=Yn-ANAtDQ_0 para aprender a configurarlo) 
+* Instalar Extension "Hashicorp Terraform"
 
 ---------------------------------------------
 ## Ejercicio 1.1 - Instalar terraform
@@ -46,3 +46,11 @@ Nos van a salir 4 prompts :
 * Default region name -> podemos dar el nombre de una region por default, seleccionemos la que nos plazca.
 * Default output format -> yo prefiero JSON
 * * https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-output-format.html
+
+
+## Ejercicio 1.3 - Crear un recurso en AWS usando Terraform
+Seguimos el Terraform Core Workflow tal como Esta Descrito en la documentacion https://www.terraform.io/intro/core-workflow :
+terraform init
+terraform plan
+terraform apply
+

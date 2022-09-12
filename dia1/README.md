@@ -47,10 +47,38 @@ Nos van a salir 4 prompts :
 * Default output format -> yo prefiero JSON
 * * https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-output-format.html
 
+## Ejercicio 1.3 - Clonar Repositorio
+Clonamos este repositorio localmente para trabajar en los laboratorios apuntando a nuestras cuentas propias de AWS free-tier
 
-## Ejercicio 1.3 - Crear un recurso en AWS usando Terraform
+```
+# Clonamos repositorio
+git clone https://github.com/jcroyoaun/cerouno-terraform-course.git
+
+# Accedemos directorio de el proyecto 
+cd cerouno-terraform-course
+
+# OPCIONAL : para abrir el proyecto en visual studio code, podemos usar el siguiente atajo si es que tenemos la terminal apropiadamente configurada
+code .
+```
+
+## Ejercicio 1.4 - Crear un recurso en AWS usando Terraform
 Seguimos el Terraform Core Workflow tal como Esta Descrito en la documentacion https://www.terraform.io/intro/core-workflow :
+
+```
+# Accedemos al directorio de dia1 ejercicio 1.4
+cd dia1/ejercicio1.4
+
+# Revisamos si hay cambios pertinentes que hacer a main.tf dependiendo de las necesidades de la clase
+
+# Utilizamos el core workflow de init/plan/apply
+
+# Inicializamos Terraform
 terraform init
+
+# Corremos el Plan y observamos el output
 terraform plan
+
+# Si el Plan es correcto, hacemos Terraform Apply
 terraform apply
+```
 

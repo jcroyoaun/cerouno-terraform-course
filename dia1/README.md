@@ -62,7 +62,7 @@ code .
 ```
 
 ## Ejercicio 1.4 - Crear un recurso en AWS usando Terraform
-Seguimos el Terraform Core Workflow tal como Esta Descrito en la documentacion https://www.terraform.io/intro/core-workflow :
+Seguimos el Terraform Core Workflow tal como Esta Descrito en la documentación https://www.terraform.io/intro/core-workflow :
 
 ```
 # Accedemos al directorio de dia1 ejercicio 1.4

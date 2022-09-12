@@ -115,7 +115,7 @@ terraform plan
 
 terraform apply
 
-# BONUS : podemos usar terraform show para ver el resultado de la ejecución, incluyendo la ruta donde se creó el archivo
+# BONUS : podemos usar terraform show para ver el resultado de la ejecución, incluyendo la ruta donde se creó el archivo y el "state". Más respecto al state en un futuro.
 terraform show
 ```
 

@@ -10,8 +10,11 @@ En este curso aprenderemos los conceptos de Infraestructura como Código y apren
 * Terraform en AWS
 * HCL Syntax
 ## Dia 2 - 
-* State file
-* Mas acerca de provisioners
+* Providers
+* Variables
+* Dependencies
+* State
+* Commands
 ## Dia 3 - 
 * Manejando otros recursos en la nube
 * Otras funciones

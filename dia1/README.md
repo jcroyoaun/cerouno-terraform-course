@@ -10,8 +10,11 @@ correcto de la herramienta en un entorno productivo.
 4. [Ejercicio 1.3 - Ejercicio 1.3 - Clonar Repositorio](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-13---clonar-repositorio)
 5. [Ejercicio 1.4 - Crear un recurso en AWS usando Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#ejercicio-14---crear-un-recurso-en-aws-usando-terraform)
 6. [Ejercicio 1.5 - HCL Syntaxt / local_provider](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-15---hcl-syntax--ejemplo-con-local_provider)
-7. [Ejercicio 1.6 - Actualizando recursos existentes]()
-
+7. [Ejercicio 1.6 - Actualizando recursos existentes](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-16---saliendo-del-core-workflow-actualizando-y-destruyendo-recursos)
+8. [Ejercicio 1.7 - Argumentos requeridos](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-17---argumentos-requeridos)
+9. [Ejercicio 1.8 - Argumentos conflictuados](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-18---argumentos-conflictuados)
+10. [Ejercicio 1.9 - Volviendo a AWS](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-19---volviendo-a-aws)
+11. [Ejercicio 1.10 - Input variables](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-110---utilizando-input-variables)
 ## Prerequisitos :
 * Tener cuenta de AWS (free tier)
 * Tener AWS CLI instalado

@@ -51,7 +51,10 @@ IAM o Administración de identidades es un mecanismo de AWS que nos permitirá m
 
 ### Para configurar las llaves
 * En nuestra terminal tecleamos
+
+```
 aws configure
+```
 
 Nos van a salir 4 prompts :
 * AWS Access Key ID -> aqui escribimos la llave de acceso

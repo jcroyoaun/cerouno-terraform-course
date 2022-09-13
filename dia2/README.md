@@ -58,7 +58,47 @@ terraform init
 
 ## Variables en Terraform.
 Hasta el momento hemos usado variables "hardcoded" lo cual limita la reusabilidad. A partir de esta sección haremos la inclusión de variables en nuestros ejemplos y veremos los distintos tipos que existen y su comportamiento.
-utput variables
+
+Comenzaremos con una introducción 
+Input Variables serve as parameters for a Terraform module, so users can customize behavior without editing the source.
+
+Output Values are like return values for a Terraform module.
+
+Local Values are a convenience feature for assigning a short name to an expression.
+
+Comencemos con un ejercicio de variables usando el recurso aws_iam_user. Si se siguieron los ejercicios del dia1, este ejercicio nos servirá para aprender comandos fuera del flujo normal de Terraform así como una breve introducción al state file que veremos con mayor detalle en delante.
+
+```
+### Ejercicio 2.4 - Primeras input variables
+# Accedemos al directorio del ejercicio
+cd ejercicio2.4
+```
+En este ejercicio, vamos a utilizar el bloque de variables para declarar valores dentro del argumento "default" de estas para posteriormente expandir dichas variables en el bloque de resource.
+
+```
+# Usamos el Core Workflow de Terraform hasta plan...
+terraform init
+
+terraform plan
+```
+
+En este punto, podemos ver que el plan es agregar un recurso nuevo, sin embargo, si estamos siguiendo el ejercicio con la intención correcta, deberíamos asumir que algo anda mal, puesto que ya creamos el usuario en nuestra cuenta de AWS el día de ayer. 
+
+```
+# Prosigamos con terraform apply
+terraform apply
+```
+Terraform nos muestra un output con un mensaje de error de tipo
+```
+EntityAlreadyExists
+```
+
+Esto es por que ya tenemos un usuario con esas mismas especificaciones creado como recurso en nuestra cuenta de AWS, pero...
+
+* Por qué no nos mostró un error durante terraform plan?
+* Hay algo que se pueda hacer al respecto?
+
+terraform import...
 
 
 ## Dependencias en Terraform

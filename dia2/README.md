@@ -13,8 +13,47 @@ Existen distintas clasificaciones de Providers, algunos Local y AWS son de grado
 
 https://www.terraform.io/registry/providers
 
-Ejercicio 2.1 - Trabajando con 
-El comando init, dentro del Core Workflow descarga los plugins 
+## Ejercicio 2.1 - Trabajando con multiples providers
+El comando init descarga los plugins, apliquemos unicamente init al ejercicio2.1 para observar el output.
+
+```
+# Accedemos al directorio del ejercicio
+cd ejercicio2.1
+
+# Usamos unicamente terraform init
+terraform init
+```
+
+## Ejercicio 2.2 - Multiples archivos en el directorio de configuración
+En este ejercicio vamos a aprender acerca de los archivos de configuracion en Terraform y como decide Terraform el flujo de provisionamiento de recursos.
+```
+# Accedemos al directorio del ejercicio
+cd ejercicio2.2
+
+# Usamos el Core Workflow de Terraform
+terraform init
+
+terraform plan
+```
+
+Hagamos una pequeña pausa para pensar, cual será el output después de correr Terraform apply
+
+```
+# Corremos terraform apply
+terraform apply
+```
+
+## Variables en Terraform.
+
+utput variables
+
+
+## Dependencias en Terraform
+
+### Explicitas
+
+### Implicitas
+
 
 
 we have to run terraform init each time we add a new provider to the file
@@ -29,12 +68,14 @@ terraform dependencies
 -> explicit
 -> implicit
 
-output variables
+o
 
-terraform state
+## Terraform state
 
-Other considerations .. (for each, datasources, mutable vs immutable infra)
+## Other considerations .. (for each, datasources, mutable vs immutable infra)
 
+
+## Más labs 
 
 AWS labs (s3 bucket, dynamo DB)
 

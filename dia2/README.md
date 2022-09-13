@@ -133,6 +133,16 @@ o
 AWS labs (s3 bucket, dynamo DB)
 
 
+
+
+variable block anatomy 
+```
+variable "variable_name" {
+  default = "valor" # mandatorio
+  type = string #no es mandatorio cuando hay sintaxis que implicitamente revela el tipo
+  description = "descripcion de la variable" #opcional
+}
+```
 tipos de top level blocks
 https://www.udemy.com/course/hashicorp-certified-terraform-associate-on-azure-cloud/learn/lecture/27144470#overview
 

@@ -13,7 +13,7 @@ Existen distintas clasificaciones de Providers, algunos Local y AWS son de grado
 
 https://www.terraform.io/registry/providers
 
-## Ejercicio 2.1 - Trabajando con multiples providers
+### Ejercicio 2.1 - Trabajando con multiples providers
 El comando init descarga los plugins, apliquemos unicamente init al ejercicio2.1 para observar el output.
 
 ```
@@ -24,7 +24,7 @@ cd ejercicio2.1
 terraform init
 ```
 
-## Ejercicio 2.2 - Multiples archivos en el directorio de configuración
+### Ejercicio 2.2 - Multiples archivos en el directorio de configuración
 En este ejercicio vamos a aprender acerca de los archivos de configuracion en Terraform y como decide Terraform el flujo de provisionamiento de recursos.
 ```
 # Accedemos al directorio del ejercicio
@@ -43,8 +43,21 @@ Hagamos una pequeña pausa para pensar, cual será el output después de correr 
 terraform apply
 ```
 
-## Variables en Terraform.
+### Ejercicio 2.3 - Identificando el tipo de Provider
+Hasta el momento hemos aprendido que cuando corremos Terraform init, se instalan los plugins de un proveedor que nos permite comunicarnos con las APIs expuestas del proveedor para manipular y configurar sus distintos recursos. Hemos usado solo "Official Providers" como Local, Azure y AWS. En este pequeño ejercicio vamos a observar el output de terraform init para averiguar que tipo de proveedor es el declarado en el archivo de Configuración, nos vamos a apoyar en la documentación oficial para averiguar el tipo https://registry.terraform.io/browse/providers
 
+```
+# Accedemos al directorio del ejercicio
+cd ejercicio2.3
+
+# Usamos el Core Workflow de Terraform
+terraform init
+
+```
+
+
+## Variables en Terraform.
+Hasta el momento hemos usado variables "hardcoded" lo cual limita la reusabilidad. A partir de esta sección haremos la inclusión de variables en nuestros ejemplos y veremos los distintos tipos que existen y su comportamiento.
 utput variables
 
 
@@ -79,4 +92,7 @@ o
 
 AWS labs (s3 bucket, dynamo DB)
 
+
+tipos de top level blocks
+https://www.udemy.com/course/hashicorp-certified-terraform-associate-on-azure-cloud/learn/lecture/27144470#overview
 

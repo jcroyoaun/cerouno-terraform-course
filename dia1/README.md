@@ -10,8 +10,11 @@ correcto de la herramienta en un entorno productivo.
 4. [Ejercicio 1.3 - Ejercicio 1.3 - Clonar Repositorio](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-13---clonar-repositorio)
 5. [Ejercicio 1.4 - Crear un recurso en AWS usando Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia1/README.md#ejercicio-14---crear-un-recurso-en-aws-usando-terraform)
 6. [Ejercicio 1.5 - HCL Syntaxt / local_provider](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia1#ejercicio-15---hcl-syntax--ejemplo-con-local_provider)
-
-
+7. [Ejercicio 1.6 - Actualizando recursos existentes](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-16---saliendo-del-core-workflow-actualizando-y-destruyendo-recursos)
+8. [Ejercicio 1.7 - Argumentos requeridos](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-17---argumentos-requeridos)
+9. [Ejercicio 1.8 - Argumentos conflictuados](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-18---argumentos-conflictuados)
+10. [Ejercicio 1.9 - Volviendo a AWS](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-19---volviendo-a-aws)
+11. [Ejercicio 1.10 - Input variables](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia1/README.md#ejercicio-110---utilizando-input-variables)
 ## Prerequisitos :
 * Tener cuenta de AWS (free tier)
 * Tener AWS CLI instalado
@@ -48,7 +51,10 @@ IAM o Administración de identidades es un mecanismo de AWS que nos permitirá m
 
 ### Para configurar las llaves
 * En nuestra terminal tecleamos
+
+```
 aws configure
+```
 
 Nos van a salir 4 prompts :
 * AWS Access Key ID -> aqui escribimos la llave de acceso
@@ -135,4 +141,107 @@ resource "local_file" "pollo" {
 * * file = resource (https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file
 * * "pollos" - el nombre logico con el que vamos a identificar el recurso.
 * Dentro de los brackets {} tenemos los argumentos escritos en formato key / value pair.
+
+
+## Ejercicio 1.6 - Saliendo del Core Workflow, actualizando y destruyendo recursos 
+Fuera del "Core Workflow", y donde vamos a pasar la mayor parte de nuestra vida profesional en Terraform es a partir del Dia2+. Por tanto, debemos aprender el flujo de actualizar y evolucionar nuestros recursos.
+
+Para el ejercicio 1.6, vamos a inicializar el directorio y aplicar los cambios tal como lo hemos visto en los ejercicios anteriores (OJO: no modificar archivo .tf todavia)
+```
+# Hacemos cd al directorio del ejercicio1.6
+cd ejercicio1.6
+
+# Utilizamos el core workflow de init/plan/apply
+terraform init
+
+terraform plan
+
+terraform apply
+```
+Después, descomentamos la línea de file_permission de nuestro archivo local.tf, y ejecutamos el core workflow de nuevo.
+
+Analicemos como el output de terraform plan es distinto.
+
+
+## Ejercicio 1.7 - Argumentos requeridos
+```
+# Hacemos cd al directorio del ejercicio1.7
+cd ejercicio1.7
+
+# Utilizamos el core workflow de init/plan/apply
+terraform init
+
+terraform plan
+
+terraform apply
+```
+Vemos el mensaje de error, qué podrá ser? 
+
+
+## Ejercicio 1.8 - Argumentos conflictuados
+```
+# Hacemos cd al directorio del ejercicio1.8
+cd ejercicio1.8
+
+# Utilizamos el core workflow de init/plan/apply
+terraform init
+
+terraform plan
+
+terraform apply
+```
+
+https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file
+
+
+## Ejercicio 1.9 - Volviendo a AWS
+Ahora que aprendimos y pudimos reflexionar acerca de la sintaxis HCL y el Core Workflow de Terraform y algunas desviaciones comunes de este, es momento de mudarnos a La Nube.
+
+Analicemos el ejercicio 1.9 y observemos que, el archivo donde tenemos nuestro codigo ahora se hace llamar "main.tf". Este es el nombre estandar que tienen los archivos declarativos de Terraform cuando solo tenemos uno. En este punto, tenemos otros bloques, además del clásico bloque "resource" que hemos visto en Ejercicios Anteriores.
+
+```
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+
+  required_version = ">= 1.2.0"
+}
+provider "aws" {
+  region  = "us-west-2"
+}
+
+resource "aws_instance" "app_server" {
+  ami           = "ami-830c94e3"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "EjemploDeAppServerInstance"
+  }
+}
+```
+
+### Bloque Terraform
+* Contiene informacion acerca de los providers. Se utiliza también para establecer versiones del proveedor en las que queremos trabajar
+
+### Providers
+* Establecemos que es aws. Recordemos que podemos tener multiples providers en la configuracion de Terraform, ya que este es Agnostico de la nube y es una de las ventajas principales.
+
+### Resources 
+* Aqui definimos el tipo de recurso que vamos a desplegagr o modificar En La Nube.
+
+Seguimos el core workflow y un terraform show al final para leer los cambios que realizamos.
+
+OJO : no olvidemos usar terraform destroy al final, ya que los recursos en la nube son costosos.
+
+
+## Ejercicio 1.10 - Utilizando input variables
+En este ejercicio, tenemos dos versiones de el manejo de variables, una es la utilización de estas usando un archivo variable.tf y el otro es utilizano la bandera -var desde el terraform CLI. (linea de comandos de terraform)
+
+```
+terraform apply -var "instance_name=OtroNombreDiferente"
+```
 

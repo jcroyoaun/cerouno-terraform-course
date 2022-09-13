@@ -8,8 +8,8 @@ El dia de hoy aprenderemos más a fondo lo que son los providers, los distintos 
 3. [Ejercicio 2.2 - Multiples archivos en el directorio de configuración](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia2/README.md#ejercicio-22---multiples-archivos-en-el-directorio-de-configuraci%C3%B3n)
 4. [Ejercicio 2.3 - Identificando el tipo de Provider](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia2/README.md#ejercicio-23---identificando-el-tipo-de-provider)
 5. [Variables en Terraform](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia2/README.md#variables-en-terraform)
-6. []()
-7. []()
+6. [Ejercicio 2.4 - Primeras input variables](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia2/README.md#ejercicio-24---primeras-input-variables)
+7. [Ejercicio 2.5 - Output variables en archivos separados](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia2/README.md#ejercicio-25---output-variables-en-archivos-separados)
 8. []()
 9. []() 
 

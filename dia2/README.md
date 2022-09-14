@@ -77,6 +77,12 @@ Local Values are a convenience feature for assigning a short name to an expressi
 
 Comencemos con un ejercicio de variables usando el recurso aws_iam_user. Si se siguieron los ejercicios del dia1, este ejercicio nos servirá para aprender comandos fuera del flujo normal de Terraform así como una breve introducción al state file que veremos con mayor detalle en delante.
 
+terraform variables
+-> variable.tf
+-> variables.tfvar
+-> export env vars
+-> -var precedence
+
 ### Ejercicio 2.4 - Primeras input variables
 
 ```
@@ -137,30 +143,90 @@ variable "variable_name" {
 ```
 
 
+### Ejercicio 2.6 - Ejemplo de Tipos de Variable
+En este ejercicio, veremos un ejemplo de utilización de variables usando una lista. Primero con asignación de tipo implicita y luego explicitamente de varias maneras.
+
+Nota: Veamos que usamos el proveedor de tipo Random por primera vez.
+
+
+### Ejercicio 2.7 - 
+Aquí aprenderemos del orden de precedencia de las variables en Terraform y los diferentes tipos de variables que existen.
+
+1. Env Variables
+```
+export TF_VAR_filename
+```
+
+2. terraform.tfvars
+
+3. *.auto.tfvars (orden alfabetico)
+
+4. -var o -var-file (command line flags)
+
+
+En este ejercicio 2.7 correremos el core workflow tal cual como tenemos nuestras declaraciones y luego jugaremos un poco con los distintos tipos de declaraciones para entender la diferencia entre tfvars, .tf, etc...
+
+
+### Ejercicio 2.8 - Resource attributes
+Aquí aplicaremos el término resource attribute para que dos bloques puedan intercambiar información o intercambiar variables
+
+
+```
+# Accedemos al directorio del ejercicio
+cd ejercicio2.8
+```
+
+Corremos el ejercicio para ver la inclusion de variables de otro recurso usadas por el proveedor Local.
+
+Nota: explorar depends_on = [ random_pet.my-pet ]
+
+## Terraform state
+El archivo state es un archivo que contiene información referente a la infraestructura tal como la conocemos. Terraform crea/actualiza este archivo después de un terraform apply para reconciliar la infraestructura tal cual como existe.
+
+### Remote state file
+Por temas de seguridad y predictibilidad, en un entorno de trabajo real, con varios colaboradores, querremos mantener el state file de manera remota. Aprenderemos más de state files en un lab en el futuro.
+
+
+### Ejercicio 2.9 - Importando infraestructura ya existente.
+```
+# Accedemos al directorio del ejercicio
+cd ejercicio2.9
+
+# Usamos el Core Workflow de Terraform
+terraform init
+
+terraform plan
+
+terraform apply
+```
+
+Resolvemos el error con :
+
+```
+terraform import
+```
+
+### Ejercicio 2.10 - Count en terraform
+```
+# Accedemos al directorio del ejercicio
+cd ejercicio2.10
+```
+
+Aqui aprenderemos la funcion de count en terraform utilizando distintas tecnicas que nos ayudaran en infraestructura escalable.
+
+
+
+### Cerrando con esta iteración de State 
+Es importante saber que el state file guarda contraseñas y que en una implementación en un proyecto escalable, esto puede ocasionar problemas de seguridad que analizaremos más delante.
+
 
 ## Dependencias en Terraform
 
+
 ### Explicitas
-
+Reservado para lAB
 ### Implicitas
-
-
-
-we have to run terraform init each time we add a new provider to the file
-
-terraform variables
--> variable.tf
--> variables.tfvar
--> export env vars
--> -var precedence
-
-terraform dependencies
--> explicit
--> implicit
-
-o
-
-## Terraform state
+Reservado para lAB
 
 ## Other considerations .. (for each, datasources, mutable vs immutable infra)
 
@@ -171,7 +237,7 @@ AWS labs (s3 bucket, dynamo DB)
 
 
 
-
+NOTAS EXTRA : we have to run terraform init each time we add a new provider to the file
 
 tipos de top level blocks
 https://www.udemy.com/course/hashicorp-certified-terraform-associate-on-azure-cloud/learn/lecture/27144470#overview

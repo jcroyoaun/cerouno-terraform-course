@@ -1,0 +1,4 @@
+.terraform*
+*.txt
+*.tfstate*
+*.out

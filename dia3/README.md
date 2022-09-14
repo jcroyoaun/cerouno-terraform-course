@@ -96,9 +96,51 @@ version ~> "1.2"
 Significa 1.2 o mayor hasta el 1.9 (el simbolo busca de acuerdo a la version mayor).
 
 
+## AWS
+A partir de este punto trabajaremos con 3 servicios de AWS
 
-## Bakend remotos con S3 (REMOTE STATE FILE)
-Hasta ahora, hemos utilizado el bloque de terraform unicamente para el manejo de versiones, a partir de aqui, aprenderemos a almacenar el state file de manera remota usando AWS S3.
+* IAM 
+* S3
+* Dynamo DB
+
+## Ejercicio 3.7 - creando IAM policies y agregandoselas a un usuario
+Las politicas de IAM en AWS se manejan con json files. En este ejercicio observaremos la inclusión del modulo file para leer un JSON file que será utilizado para definir las políticas de un usuario.
+
+```
+# Naveguemos al directorio del ejercicio3.7
+cd ejercicio3.7
+
+# Inspeccionemos el documento con calma
+```
+
+En este ejercicio estamos aprendiendo :
+* Uso de distintos recursos
+* Inclusion de modulos nuevos
+* Dependencias implicitas
+
+Podemos proseguir a correr el Core Workflow para crear la politica nueva y ver como funciona en nuestra vista de Usuarios en AWS.
+
+## AWS S3 
+Se usa para almacenar datos altamente disponibles (pueden existir en varias regiones y así seguir disponibles en caso de un desastre).
+Mucha gente usa S3 para crear WordPress, almacenar archivos que se compartirán entre equipos, etc.
+
+Anécdota :
+Para crear un sitio web visible y accesible por el mundo es necesario tener un entendimiento de los servicios que ofrece AWS, tales como routing, DNS, A Records, etc...
+
+## Ejercicio 3.8 - 
+
+
+
+## Ejercicio 3.9
+
+
+# Terraform State y Remote state file
+Como hemos visto hasta ahora, el state file es el que almacena lo que terraform conoce acerca de la infraestructura, y se actualiza cuando usamos Terraform Apply.
+
+Como hemos discutido previamente, almacenar el state file de manera local no es una práctica aplicable en un entorno de trabajo colaborativo, generalmente el state file se almacena de manera remota para que exista un "single source of truth". El state file tiene un mecanismo de bloqueo que evita que se sobreescriba concurrentemente por dos o mas procesos. 
+
+## Backend remotos con S3 (REMOTE STATE FILE)
+Hasta ahora, hemos utilizado el bloque de terraform unicamente para el manejo de versiones, a partir de aqui, aprenderemos a almacenar el state file de manera remota usando AWS S3, .
 
 Nota :
 Para otros proveedores existen otros Providers para este tipo de almacenamiento, tales como AzureRM, GCS, Local
@@ -110,12 +152,13 @@ Aqui aprenderemos la funcion de count en terraform utilizando distintas tecnicas
 Cerrando con esta iteración de State
 Es importante saber que el state file guarda contraseñas y que en una implementación en un proyecto escalable, esto puede ocasionar problemas de seguridad que analizaremos más delante.
 
-Dependencias en Terraform
-Explicitas
-Reservado para lAB
 
-Implicitas
-Reservado para lAB
+
+### Comandos para analizar el state file
+
+
+## Provisioners
+
 
 Other considerations .. (for each, datasources, mutable vs immutable infra)
 Más labs

@@ -128,10 +128,24 @@ Anécdota :
 Para crear un sitio web visible y accesible por el mundo es necesario tener un entendimiento de los servicios que ofrece AWS, tales como routing, DNS, A Records, etc...
 
 ## Ejercicio 3.8 - 
+En este ejercicio aplicaremos IAM groups, policies para la creación de un S3 bucket.
+```
+# Naveguemos al directorio del ejercicio3.8
+cd ejercicio3.8
 
+# Inspeccionemos el documento con calma
+```
 
+Veamos que el documento tiene un bloque de tipo data, así como una serie de dependencias implicitas y otros marcos teóricos como expresiones de referencia e interpolación, así como otros conceptos teóricos, cosa que nos acerca cada vez más a llegar a un punto donde podamos integrar el conocimiento en crear algún recurso significativo o de utilidad.
 
-## Ejercicio 3.9
+```
+# Corremos el core workflow...
+terraform init
+
+terraform plan
+
+terraform apply
+```
 
 
 # Terraform State y Remote state file

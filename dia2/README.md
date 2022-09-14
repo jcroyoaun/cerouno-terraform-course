@@ -1,6 +1,6 @@
 # DIA 2
 
-El dia de hoy aprenderemos más a fondo lo que son los providers, los distintos tipos y sus clasificaciones, así como convenciones de organización de los archivos de configuración de Terraform, uso de variables y algunos ejemplos de provisionar distintos recursos en AWS tales como S3, Dynamo DB, etc.
+El dia de hoy aprenderemos más a fondo lo que son los providers (no confundir con provisioners), los distintos tipos y sus clasificaciones, así como convenciones de organización de los archivos de configuración de Terraform, uso de variables y algunos ejemplos de provisionar distintos recursos en AWS tales como S3, Dynamo DB, etc.
 
 # Indice
 1. [Providers](https://github.com/jcroyoaun/cerouno-terraform-course/edit/2207-devops/dia2/#providers)

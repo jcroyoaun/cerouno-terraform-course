@@ -11,7 +11,7 @@ El dia de hoy aprenderemos más a fondo lo que son los providers (no confundir c
 6. [Ejercicio 2.4 - Primeras input variables](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia2/README.md#ejercicio-24---primeras-input-variables)
 7. [Ejercicio 2.5 - Output variables en archivos separados](https://github.com/jcroyoaun/cerouno-terraform-course/blob/2207-devops/dia2/README.md#ejercicio-25---output-variables-en-archivos-separados)
 8. [Ejercicio 2.6 - Usando otros tipos de variables]()
-9. [Ejercicio 2.7 - ](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia2#ejercicio-27--) 
+9. [Ejercicio 2.7 - Orden de precedencia](https://github.com/jcroyoaun/cerouno-terraform-course/tree/2207-devops/dia2#ejercicio-27---orden-de-precedencia) 
 
 
 ## Providers
@@ -149,7 +149,7 @@ En este ejercicio, veremos un ejemplo de utilización de variables usando una li
 Nota: Veamos que usamos el proveedor de tipo Random por primera vez.
 
 
-### Ejercicio 2.7 - 
+### Ejercicio 2.7 - Orden de precedencia
 Aquí aprenderemos del orden de precedencia de las variables en Terraform y los diferentes tipos de variables que existen.
 
 1. Env Variables

@@ -65,6 +65,9 @@ resource "aws_s3_bucket_policy" "merchandising-policy" {
   EOF
 }
 
+output "fds" {
+    value = data.aws_iam_user.catalog-data.user_name
+}
 # resource "aws_s3_object" "examplebucket_object" {
 #   key    = "somekey"
 #   bucket = aws_s3_bucket.catalogo.id

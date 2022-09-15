@@ -14,7 +14,6 @@ resource "aws_dynamodb_table_item" "car-items" {
   item = <<EOF
     {
         "Manufacturer": {"S": "Toyota"},
-        "Make": {"S": "Corolla"},
         "Year": {"N": "2004"},
         "VIN": {"S": "4YSL16Z841193"}
     }

@@ -139,6 +139,12 @@ terraform console
 var.num[0] + var.num[1]
 ```
 
+
+
+## Terraform format
+terraform fmt para arreglar la sintaxis 
+
+
 ## Workspaces (OSS)
 El uso de workspaces en Terraform tiene como objetivo tomar ventaja de IaC en su totalidad y reutilizar las distintas ventajas de reutilización y automatización que estas proveen.
 

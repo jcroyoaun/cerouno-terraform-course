@@ -64,6 +64,94 @@ Con modulos, podríamos reutilizar los escenarios más comunes en implementacion
 
 DRY ("Don't Repeat Yourself") 
 
+## Funciones
+Existen varios tipos de funciones como
+
+* numeric functions
+```
+2 + 2
+max (-1, 2, -10, 200, -250)
+min(-1, 2, -10, 200, -250)
+ceil(10.1)
+ceil(10.9)
+floor(10.1)
+```
+
+
+* string functions
+```
+split("," "ami-xyz,AMI-ABC,ami-efg")
+lower("ami-xyz,AMI-ABC,ami-efg")
+upper("ami-xyz,AMI-ABC,ami-efg")
+join()
+title(var.ami)
+etc...
+```
+
+* type conversion functions
+```
+length(var.nombres_de_servidores)
+index(var.ami, "AMI-ABC")
+element()
+contains(var.ami, "AMI-ABC")
+```
+
+```
+keys(var.ami)
+values(var.ami)
+```
+
+```
+cd funciones
+
+# Hacemos terraform init
+terraform init
+
+# Corremos el comando terraform console
+terraform console
+```
+
+## Operadores de igualdad
+
+```
+cd funciones
+
+# Hacemos terraform init
+terraform init
+
+# Corremos el comando terraform console
+terraform console
+```
+
+```
+8 == 8
+
+8 == 7
+
+8 != "8"
+
+5 < 6
+```
+
+
+```
+8 > 7 && 8 < 10
+var.num[0] + var.num[1]
+```
+
+## Workspaces (OSS)
+El uso de workspaces en Terraform tiene como objetivo tomar ventaja de IaC en su totalidad y reutilizar las distintas ventajas de reutilización y automatización que estas proveen.
+
+```
+terraform worskpace new ProjectA
+```
+
+to switch workspace
+
+```
+terraform workspace select
+```
+
 
 ## Terraform Enterprise y Terraform Cloud
 Terraform Enterprise y Cloud son muy similares entre si, ambas son versiones de Terraform que son utilizadas en entornos de trabajo con muchas personas modificando los recursos de la infraestructura. La diferencia más significativa entre ellos es que uno corre en la nube y otro corre en la infraestructura privada de una organización.

@@ -5,10 +5,21 @@ En este curso aprenderemos los conceptos de Infraestructura como Código y apren
 
 # Temario : 
 ## Dia 1 - 
+* Pre requisitos y configuración de entorno de desarrollo
+* IaC
+* Terraform en AWS
+* HCL Syntax
 ## Dia 2 - 
+* Providers
+* Variables
+* Dependencies
+* State
+* Commands
 ## Dia 3 - 
+* Manejando otros recursos en la nube
+* Otras funciones
 ## Dia 4 - 
-
+* Integracion de conocimientos
 
 ### Qué es IaC? - 
 Infraestructura como código o IaC por sus siglas en inglés "Infrastructure as Code" es una metodología moderna de DevOps que consiste en escribir y versionar nuestra infraestructura en algún formato legible por una máquina con el fin de automatizar y hacer repetibles y consistentes las tareas de crear recursos de infraestructura tales como VMs, Load Balancers, contenedores, VPCs, grupos de usuarios, etc...
@@ -22,4 +33,4 @@ Esto lo convierte en la herramienta de IaC más utilizada en la industria y exis
 
 
 ### Ejercicio introductorio del Dia1
-Ahora que hemos definido los conceptos de IaC y Terraform 
+Ahora que hemos definido los conceptos de IaC y Terraform

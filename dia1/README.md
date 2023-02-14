@@ -49,6 +49,9 @@ IAM o Administración de identidades es un mecanismo de AWS que nos permitirá m
 * * * * Presionamos "Create New Access Key"
 * * * * * NOTA : podemos descargar el archivo con las credenciales o copiar/pegar de las que nos aparecen en pantalla. Asegurense de guardarlas en un lugar accessible pues una vez que las perdemos, tendremos que generar otras nuevas.
 
+Si cualquiera de estos pasos esta desactualizado, visitar: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
+
+
 ### Para configurar las llaves
 * En nuestra terminal tecleamos
 

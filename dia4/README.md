@@ -64,6 +64,25 @@ Con modulos, podríamos reutilizar los escenarios más comunes en implementacion
 
 DRY ("Don't Repeat Yourself") 
 
+Usando el ejemplo de ayer, podriamos re-estructurar nuestro codigo de esta manera:
+
+```
+project_modules/
+├── main.tf
+├── provider.tf
+├── network/
+│   ├── main.tf
+│   └── outputs.tf
+├── security/
+│   ├── main.tf
+│   └── outputs.tf
+└── ec2/
+    ├── main.tf
+    └── outputs.tf
+```
+
+
+
 ## Funciones
 Existen varios tipos de funciones como
 
